@@ -23,6 +23,7 @@
     </style>
 
     <meta name="theme-color" content="#fafafa">
+
 </head>
 
 <body>
@@ -33,7 +34,21 @@
         david[ATAT]eskimo-nation.co.uk<br>
         PHP, Wordpress, React, ColdFusion, SQL, Javascript<br>
         <a href="https://twitter.com/stormingnormal">tweet me</a>
+        <div style="position:absolute;bottom:0;right:0">
+            <input type="checkbox" id="retro"><label for="retro">retro loading screen (photosenstivity warning)</label>
+        </div>
+
     </main>
+    <script>
+        document.getElementById('retro').onclick = function () {
+            if (this.checked) {
+                document.getElementsByTagName('body')[0].style.backgroundImage = "url('loader.gif')";
+            } else {
+                document.getElementsByTagName('body')[0].style.backgroundImage = '';
+            }
+
+        }
+    </script>
 </body>
 
 </html>
